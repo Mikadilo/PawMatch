@@ -1,0 +1,11 @@
+.router-link-exact-active {
+    color: #0d6efd !important;
+}
+
+/* Ex : animation de fondu */
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 1s ease;
+}
+.fade-enter-from, .fade-leave-to {
+    opacity: 0;
+}
