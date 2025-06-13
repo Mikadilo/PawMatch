@@ -4,8 +4,101 @@
 
 /* Ex : animation de fondu */
 .fade-enter-active, .fade-leave-active {
-    transition: opacity 1s ease;
+    transition: opacity 0.2s ease;
 }
 .fade-enter-from, .fade-leave-to {
     opacity: 0;
 }
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Évite les petits bugs d'espacement */
+}
+
+.animaux-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+    padding: 0 0.5rem; /* évite le débordement léger */
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.swipe-left {
+    animation: swipeLeft 0.3s ease forwards;
+}
+
+.swipe-right {
+    animation: swipeRight 0.3s ease forwards;
+}
+
+@keyframes swipeLeft {
+    to {
+        transform: translateX(-400px) rotate(-15deg);
+        opacity: 0;
+    }
+}
+
+@keyframes swipeRight {
+    to {
+        transform: translateX(400px) rotate(15deg);
+        opacity: 0;
+    }
+}
+
+body{
+    max-width: 100dvw;
+    overflow-x: hidden;
+}
+
+.pet-card {
+    flex: 1 1 calc(33.333% - 1rem);
+    max-width: calc(33.333% - 1rem);
+    box-sizing: border-box;
+}
+
+@media (max-width: 992px) {
+    .pet-card {
+        flex: 1 1 calc(50% - 1rem);
+        max-width: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 576px) {
+    .pet-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+.card-img-top {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-bottom {
+    position: fixed !important;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: #ffffff;
+    z-index: 1050;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+

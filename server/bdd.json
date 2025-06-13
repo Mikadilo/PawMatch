@@ -1,0 +1,81 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Mika",
+      "password": "test",
+      "email": "mika@gmail.com"
+    },
+    {
+      "id": 2,
+      "username": "Blandine",
+      "password": "test",
+      "email": "blandine@gmail.com"
+    },
+    {
+      "id": 3,
+      "username": "Enzo",
+      "password": "test",
+      "email": "enzo@gmail.com"
+    },
+    {
+      "id": 4,
+      "username": "Oceane",
+      "email": "oceane@gmail.com",
+      "password": "test"
+    }
+  ],
+  "pets": [
+    {
+      "id": 1749760598584,
+      "name": "Gertrude",
+      "type": "Chienne",
+      "ownerId": 1,
+      "age": 6,
+      "photo": "https://m.media-amazon.com/images/M/MV5BZjA0MDgyYmItNzkzMC00OTM2LThlYzktMWMxZWU3ZGNkNDI3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      "likedBy": [
+        4
+      ]
+    },
+    {
+      "id": 1749806784015,
+      "name": "Steve",
+      "type": "poisson",
+      "ownerId": 4,
+      "age": 1,
+      "photo": "data:image/jpeg;base64,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",
+      "likedBy": []
+    }
+  ],
+  "conversations": [
+    {
+      "id": 1749807273999,
+      "participants": [
+        4,
+        1
+      ],
+      "messages": [
+        {
+          "authorId": 4,
+          "text": "hey",
+          "date": "2025-06-13T09:34:37.136Z"
+        },
+        {
+          "authorId": 4,
+          "text": "je suis intéressé par votre chienne",
+          "date": "2025-06-13T09:34:47.160Z"
+        },
+        {
+          "authorId": 1,
+          "text": "est moi par votre poisson steve",
+          "date": "2025-06-13T09:35:20.037Z"
+        },
+        {
+          "authorId": 1,
+          "text": "hihihi",
+          "date": "2025-06-13T09:38:30.448Z"
+        }
+      ]
+    }
+  ]
+}

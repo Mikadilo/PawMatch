@@ -1,15 +1,20 @@
 <template>
   <div class="d-flex flex-column min-vh-100">
     <!-- Contenu principal -->
-    <main class="container flex-grow-1 d-flex justify-content-center align-items-center">
-      <transition name="fade" mode="out-in">
-        <router-view />
-      </transition>
+    <main style="padding-bottom: 60px;">
+      <router-view v-slot="{ Component }">
+        <transition name="fade" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
+
     </main>
 
 
     <!-- Navbar toujours visible en bas -->
-    <nav class="navbar navbar-light bg-light border-top">
+    <nav
+        v-if="!isLoginPage"
+        class="navbar navbar-light bg-light border-top navbar-bottom p-0">
       <div class="container-fluid justify-content-center">
         <ul class="navbar-nav flex-row justify-content-between w-100">
           <li class="nav-item">
@@ -57,3 +62,10 @@
     </nav>
   </div>
 </template>
+<script setup>
+import { useRoute } from 'vue-router'
+import { computed } from 'vue'
+
+const route = useRoute()
+const isLoginPage = computed(() => route.path === '/login')
+</script>
